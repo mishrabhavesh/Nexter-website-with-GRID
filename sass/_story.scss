@@ -7,23 +7,41 @@
         grid-template-rows: repeat(6, 1fr);
         align-items: center;
         background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url('../img/back.jpg');
+    
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1/-1;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
     }
 
     &__img--1 {
         border-radius: 10px;
         width: 100%;
-        grid-row: 2/6;
+        grid-row: 2/5;
         grid-column: 2/6;
         box-shadow: 0 2rem 5rem rgba($color: (#000000), $alpha: .1);
+    
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1/-1;
+            grid-column: 2/6;
+
+        }
     }
 
     &__img--2 {
         grid-row: 4/6;
-        grid-column: 4/7;
+        grid-column: 3/6;
         width: 115%;
         z-index: 10;
         box-shadow: 0 2rem 5rem rgba($color: (#000000), $alpha: .2);
         border-radius: 10px;
+    
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 4/-1;
+            grid-column: 3/-2;
+        }
     }
 
     &__content {
@@ -34,6 +52,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1/-1;
+            grid-row: 5/6;
+        }
     }
 
     &__text {
